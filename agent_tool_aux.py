@@ -43,7 +43,7 @@ def main_aux(args):
         import cv2
 
         # Load models
-        models.sd_key = "diffusers-generation-text-box"
+        models.sd_key = "gligen/diffusers-generation-text-box"
         models.sd_version = "sdv1.4"
         # models.sd_key = "stable-diffusion-2-1-base"
         # models.sd_version = "sdv2"
@@ -93,8 +93,8 @@ def main_aux(args):
         from transformers import SamModel, SamProcessor
         # model = SamModel.from_pretrained("sam-vit-huge").to("cuda")
         # processor = SamProcessor.from_pretrained("sam-vit-huge")
-        model = SamModel.from_pretrained("sam-vit-base").to("cuda")
-        processor = SamProcessor.from_pretrained("sam-vit-base")
+        model = SamModel.from_pretrained("facebook/sam-vit-base").to("cuda")
+        processor = SamProcessor.from_pretrained("facebook/sam-vit-base")
         raw_image = output
         input_boxes = [[layout]]
         inputs = processor([raw_image], input_boxes=input_boxes, return_tensors="pt").to("cuda")
@@ -141,6 +141,11 @@ def main_aux(args):
         # annotated_frame = annotate(image_source=image_source, boxes=boxes, logits=logits, phrases=phrases)
         # cv2.imwrite("annotated_image.jpg", annotated_frame)
         print(str_objs)
+        
+        # Save detection results to input_detection.json for demo_t2i.py
+        import json
+        with open('input_detection.json', 'w') as f:
+            json.dump(str_objs, f)
     
     elif args["tool"] == "segmentation":
         from groundingdino.util.inference import load_model, load_image, predict, annotate
@@ -175,8 +180,8 @@ def main_aux(args):
             from transformers import SamModel, SamProcessor
             # model = SamModel.from_pretrained("sam-vit-huge", torch_dtype=torch.float16).to("cuda")
             # processor = SamProcessor.from_pretrained("sam-vit-huge", torch_dtype=torch.float16)
-            model = SamModel.from_pretrained("sam-vit-base").to("cuda")
-            processor = SamProcessor.from_pretrained("sam-vit-base")
+            model = SamModel.from_pretrained("facebook/sam-vit-base").to("cuda")
+            processor = SamProcessor.from_pretrained("facebook/sam-vit-base")
             raw_image = Image.open(IMAGE_PATH)
             input_boxes = [boxes.numpy().tolist()]
             for i in range(len(input_boxes[0])):

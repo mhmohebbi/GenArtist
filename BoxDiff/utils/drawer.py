@@ -1,11 +1,10 @@
-from tkinter import *
 from PIL import ImageDraw as D
-
 import math
+import json
+import os
+
 class DashedImageDraw(D.ImageDraw):
-
     def thick_line(self, xy, direction, fill=None, width=0):
-
         if xy[0] != xy[1]:
             self.line(xy, fill=fill, width=width)
         else:
@@ -82,90 +81,37 @@ class DashedImageDraw(D.ImageDraw):
                          dash, outline, width)
         return
 
-class RectangleDrawer:
-    def __init__(self, master):
-        self.master = master
-        width, height = 512, 512
-        self.canvas = Canvas(self.master, bg='#F0FFF0', width=width, height=height)
-        self.canvas.pack()
-
-        self.rectangles = []
-        self.colors = ['blue', 'red', 'purple', 'orange', 'green', 'yellow', 'black']
-
-        self.canvas.bind("<Button-1>", self.on_button_press)
-        self.canvas.bind("<B1-Motion>", self.on_move_press)
-        self.canvas.bind("<ButtonRelease-1>", self.on_button_release)
-        self.start_x = None
-        self.start_y = None
-        self.cur_rect = None
-        self.master.update()
-        width = self.master.winfo_width()
-        height = self.master.winfo_height()
-        x = (self.master.winfo_screenwidth() // 2) - (width // 2)
-        y = (self.master.winfo_screenheight() // 2) - (height // 2)
-        self.master.geometry('{}x{}+{}+{}'.format(width, height, x, y))
-
-
-    def on_button_press(self, event):
-        self.start_x = event.x
-        self.start_y = event.y
-        self.cur_rect = self.canvas.create_rectangle(self.start_x, self.start_y, self.start_x, self.start_y, outline=self.colors[len(self.rectangles)%len(self.colors)], width=5, dash=(4, 4))
-
-    def on_move_press(self, event):
-        cur_x, cur_y = (event.x, event.y)
-        self.canvas.coords(self.cur_rect, self.start_x, self.start_y, cur_x, cur_y)
-
-    def on_button_release(self, event):
-        cur_x, cur_y = (event.x, event.y)
-        self.rectangles.append([self.start_x, self.start_y, cur_x, cur_y])
-        self.cur_rect = None
-
-    def get_rectangles(self):
-        return self.rectangles
-
-
-def draw_rectangle():
-    root = Tk()
-    root.title("Rectangle Drawer")
-
-    drawer = RectangleDrawer(root)
-
-    def on_enter_press(event):
-        root.quit()
-
-    root.bind('<Return>', on_enter_press)
-
-    root.mainloop()
-    rectangles = drawer.get_rectangles()
-
-    new_rects = []
-    for r in rectangles:
-        new_rects.extend(r)
-
-    return new_rects
-
-if __name__ == '__main__':
-    root = Tk()
-    root.title("Rectangle Drawer")
-
-    drawer = RectangleDrawer(root)
-
-    def on_enter_press(event):
-        root.quit()
-
-    root.bind('<Return>', on_enter_press)
-
-    root.mainloop()
-    rectangles = drawer.get_rectangles()
-
-    string = '['
-    for r in rectangles:
-        string += '['
-        for n in r:
-            string += str(n)
-            string += ','
-        string = string[:-1]
-        string += '],'
-    string = string[:-1]
-    string += ']'
-    print("Rectangles:", string)
+def draw_rectangle(rectangles=None):
+    """
+    Non-interactive version that accepts predefined rectangles or loads them from bbox_text.json
+    
+    Args:
+        rectangles: List of rectangles or None. If provided, can be in formats:
+                   - [[x1,y1,x2,y2], ...]
+                   - List of (text, [x,y,w,h]) tuples from layout
+    Returns:
+        List of rectangles in format [[x1,y1,x2,y2], ...]
+    """
+    if rectangles is not None:
+        # If rectangles are from layout format, convert them
+        if isinstance(rectangles, list) and len(rectangles) > 0 and isinstance(rectangles[0], tuple):
+            return [[box[0], box[1], box[0] + box[2], box[1] + box[3]] for _, box in rectangles]
+        return rectangles
+        
+    # Try to load from bbox_text.json first
+    if os.path.exists('bbox_text.json'):
+        try:
+            with open('bbox_text.json', 'r') as f:
+                content = json.load(f)
+                if isinstance(content, str):
+                    content = eval(content)  # Handle string-encoded dict
+                if 'layout' in content:
+                    # Convert layout format [x,y,w,h] to [x1,y1,x2,y2]
+                    return [[box[0], box[1], box[0] + box[2], box[1] + box[3]] 
+                            for _, box in content['layout']]
+        except Exception as e:
+            print(f"Error loading bbox_text.json: {e}")
+  
+    
+    # Default rectangle if no config found
+    return [[100, 100, 200, 200]]  # Default single rectangle

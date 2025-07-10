@@ -87,6 +87,7 @@ def command_parse(commands, text, text_bg, dir='inputs'):
             args.append(arg)
         elif command['tool'] == 'instruction':
             k = len(args)
+            print("The text for instruction tool is ", command["text"])
             arg = {"tool": "instruction", "output": osp.join(dir, str(k+1)+'.png'), "input": {"image": osp.join(dir, str(k)+'.png'), "text": command["text"]} }
             args.append(arg)
         elif command['tool'] == 'edit_attribute':
@@ -116,13 +117,15 @@ def command_parse(commands, text, text_bg, dir='inputs'):
 
 
 if __name__ == '__main__':
-    prompt = 'an oil painting, where a green vintage car, a black scooter on the left of it and a blue bicycle on the right of it, are parked near a curb, with three birds in the sky'
-    api_key = "###################################"
+    # prompt = 'an oil painting, where a green vintage car, a black scooter on the left of it and a blue bicycle on the right of it, are parked near a curb, with three birds in the sky'
+    prompt = "Two hot dogs sit on a green plate near a soda cup which are sitting on a white picnic table, while a red bike on the right of a blue car are parked nearby."
 
+    # prompt = "An icy landscape. A vast expanse of snow-covered mountain peaks stretches endlessly. Beneath them is a dense forest and a colossal frozen lake. Three people are boating in three boats separately in the lake. Not far from the lake, a volcano threatens eruption, its rumblings felt even from afar. Above, a ferocious red dragon dominates the sky and commands the heavens, fueled by the volcano's relentless energy flow."
+    api_key = os.getenv("OPENAI_API_KEY", "your-api-key-here")
 
     url = "https://api.openai.com/v1/chat/completions"
     client = OpenAI(api_key=api_key)
-
+    print("API key loaded")
     with open('prompts/generation.txt', 'r', encoding='utf-8') as f:
         template=f.readlines()
     user_textprompt=f"Input: {prompt}"
@@ -185,6 +188,7 @@ if __name__ == '__main__':
 
     ## generation and detection
     generation_command = [gen_text]
+    print("The generation command is:\n", generation_command)
     seq_args = command_parse(generation_command, prompt, gen_text['input']['bg_prompt'])
     seq_args = [seq_args[0], {'tool':'detection', 'input':{'image':'inputs/0.png', 'text':'TBG'}}]
     json.dump(seq_args[0], open('input.json','w'))
@@ -223,18 +227,71 @@ if __name__ == '__main__':
     json.dump(correction_text, open('correction_text.json','w'))
 
     correction_text = json.load(open('correction_text.json'))
-    correction_text = eval(correction_text)
+    
+    # Handle double-encoded JSON string
+    try:
+        # First try to parse as a single JSON object
+        if isinstance(correction_text, str):
+            correction_text = json.loads(correction_text)
+        correction_text = eval(correction_text) if isinstance(correction_text, str) else correction_text
+    except:
+        # If that fails, split by actual newlines and parse each JSON object
+        # Handle escaped newlines in the string
+        if isinstance(correction_text, str):
+            if '\\n' in correction_text:
+                lines = correction_text.split('\\n')
+            else:
+                lines = correction_text.split('\n')
+            
+            correction_text = []
+            for line in lines:
+                line = line.strip()
+                if line:
+                    try:
+                        correction_text.append(json.loads(line))
+                    except:
+                        print(f"Failed to parse line: {line}")
+                        continue
+    
+    # Fix correction commands that don't have required keys
+    if isinstance(correction_text, dict):
+        if 'tool' not in correction_text:
+            # Infer tool type based on available keys
+            if 'edit' in correction_text and 'input' in correction_text:
+                correction_text['tool'] = 'instruction'
+                correction_text['text'] = correction_text.get('instruction', correction_text.get('edit', ''))
+            elif 'input' in correction_text and not correction_text.get('edit'):
+                correction_text['tool'] = 'remove'
+        elif correction_text['tool'] == 'instruction' and 'text' not in correction_text:
+            # For instruction commands, map 'input' to 'text' if 'text' is missing
+            correction_text['text'] = correction_text.get('input', '')
+    elif isinstance(correction_text, list):
+        for cmd in correction_text:
+            if isinstance(cmd, dict):
+                if 'tool' not in cmd:
+                    if 'edit' in cmd and 'input' in cmd:
+                        cmd['tool'] = 'instruction'
+                        cmd['text'] = cmd.get('instruction', cmd.get('edit', ''))
+                    elif 'input' in cmd and not cmd.get('edit'):
+                        cmd['tool'] = 'remove'
+                elif cmd['tool'] == 'instruction' and 'text' not in cmd:
+                    # For instruction commands, map 'input' to 'text' if 'text' is missing
+                    cmd['text'] = cmd.get('input', '')
     
     if type(correction_text) is list:
         commands = [gen_text] + correction_text
     else:
         commands = [gen_text, correction_text]
-    
+    print("The commands are:\n", commands)
     seq_args = command_parse(commands, prompt, gen_text['input']['bg_prompt'])
 
-    # print('----------------------------------------------')
-    # for i in range(len(seq_args)):
-    #     print(i, seq_args[i])
+    print('----------------------------------------------')
+    for i in range(len(seq_args)):
+        print(i, seq_args[i])
+
+
+    print('----------------------------------------------')
+    print("Now start the generation process")
 
     for i in range(1, len(seq_args)):
         json.dump(seq_args[i], open('input.json','w'))

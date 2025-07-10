@@ -11,10 +11,10 @@ import cv2
 from scipy import ndimage
 
 def load_sam():
-    #sam_model = SamModel.from_pretrained("facebook/sam-vit-base").to(torch_device)
-    #sam_processor = SamProcessor.from_pretrained("facebook/sam-vit-base")
-    sam_model = SamModel.from_pretrained("./sam-vit-base").to(torch_device)
-    sam_processor = SamProcessor.from_pretrained("./sam-vit-base")
+    sam_model = SamModel.from_pretrained("facebook/sam-vit-base").to(torch_device)
+    sam_processor = SamProcessor.from_pretrained("facebook/sam-vit-base")
+    # sam_model = SamModel.from_pretrained("./sam-vit-base").to(torch_device)
+    # sam_processor = SamProcessor.from_pretrained("./sam-vit-base")
 
     sam_model_dict = dict(
         sam_model = sam_model, sam_processor = sam_processor

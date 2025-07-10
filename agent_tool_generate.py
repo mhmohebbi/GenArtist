@@ -128,7 +128,7 @@ def main_generate(args):
         os.sys.path.append('./LLM-groundedDiffusion')
         import models
         from models import sam
-        models.sd_key = "./diffusers-generation-text-box"
+        models.sd_key = "gligen/diffusers-generation-text-box"
         models.sd_version = "sdv1.4"
         models.model_dict = models.load_sd(
             key=models.sd_key,
@@ -160,7 +160,7 @@ def main_generate(args):
         from utils.ptp_utils import AttentionStore
         from run_sd_boxdiff import run_on_prompt
 
-        stable = BoxDiffPipeline.from_pretrained('stable-diffusion-2-1-base').to('cuda')
+        stable = BoxDiffPipeline.from_pretrained('stabilityai/stable-diffusion-2-1-base').to('cuda')
 
         objs = [i[0] for i in args["input"]["layout"]]
         prompt = args["input"]["text"]
@@ -194,7 +194,7 @@ def main_generate(args):
         import torch
         torch.set_float32_matmul_precision("high")
         pipe = StableDiffusionXLImg2ImgPipeline.from_pretrained(
-            "stable-diffusion-xl-refiner-1.0", #height=1024, width=2048,
+            "stabilityai/stable-diffusion-xl-refiner-1.0", #height=1024, width=2048,
             torch_dtype=torch.float16,
         )
 
