@@ -1,0 +1,1 @@
+"{\"tool\": \"edit\", \"input\": \"green vintage car\", \"edit\": \"blue bicycle\"}\n{\"tool\": \"edit\", \"input\": \"black scooter\", \"edit\": \"green vintage car\"}\n{\"tool\": \"edit\", \"input\": \"blue bicycle\", \"edit\": \"black scooter\"}\n{\"tool\": \"move\", \"input\": \"blue bicycle\", \"box\": [0.48, 0.58, 0.52, 0.35]}"

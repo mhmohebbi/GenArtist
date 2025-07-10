@@ -1,0 +1,1 @@
+"{\"tool\": \"addition\", \"input\": \"a dense forest\", \"box\": [0.2, 0.5, 0.6, 0.15]}\n{\"tool\": \"addition\", \"input\": \"a colossal frozen lake\", \"box\": [0.1, 0.6, 0.8, 0.2]}\n{\"tool\": \"addition\", \"input\": \"three boats\", \"box\": [0.3, 0.7, 0.4, 0.1]}\n{\"tool\": \"addition\", \"input\": \"a ferocious red dragon\", \"box\": [0.6, 0.1, 0.3, 0.2]}"

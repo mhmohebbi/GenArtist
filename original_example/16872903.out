@@ -1,0 +1,761 @@
+GPU Information:
+Thu Jun 26 05:59:56 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.133.07             Driver Version: 570.133.07     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla T4                       On  |   00000000:87:00.0 Off |                    0 |
+| N/A   31C    P8             14W /   70W |       0MiB /  15360MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Python version:
+Python 3.11.5
+PyTorch version and CUDA availability:
+PyTorch: 2.2.1+cu121
+CUDA available: True
+CUDA devices: 1
+Diffusers version:
+[2025-06-26 06:00:02,571] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Diffusers: 0.18.0
+Starting GenArtist demo...
+[2025-06-26 06:00:12,348] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-06-26 06:00:25,072] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Using box scale: (512, 512)
+Key generation settings: {'prompt': 'an oil painting, where a green vintage car, a black scooter on the left of it and a blue bicycle on the right of it, are parked near a curb, with three birds in the sky', 'gen_boxes': [['a green vintage car', [191, 281, 130, 90]], ['a black scooter', [36, 303, 120, 60]], ['a blue bicycle', [361, 290, 110, 70]], ['a bird', [80, 40, 70, 50]], ['a bird', [230, 20, 70, 50]], ['a bird', [380, 40, 70, 50]]], 'bg_prompt': 'An oil painting of a scene near a curb', 'extra_neg_prompt': ''} 27159 123483948 0.5 0.4 0.4 30
+mask_sizes: [19 19 17], scores: [19 19 17]
+Selected a mask with confidence: 0.97265625, coarse_iou: 0.32727272132231416
+mask_sizes: [30 26 20], scores: [30 26 20]
+Selected a mask with confidence: 0.9541015625, coarse_iou: 0.4482758543400715
+mask_sizes: [36 36 35], scores: [36 36 35]
+Selected a mask with confidence: 0.9716796875, coarse_iou: 0.6666666543209879
+mask_sizes: [74 53 32], scores: [ 74  53 -42]
+Selected a mask with confidence: 0.94775390625, coarse_iou: 0.6033057801379688
+mask_sizes: [100  85  83], scores: [100  85  83]
+Selected a mask with confidence: 0.90283203125, coarse_iou: 0.7251908341588487
+mask_sizes: [122 121 117], scores: [122 121 117]
+Selected a mask with confidence: 0.982421875, coarse_iou: 0.6931818142432852
+time index 0, loss: 2000.000 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.945, weighted 1.890
+reference cross-attention obj_loss: unweighted 0.754, weighted 1.509
+reference cross-attention obj_loss: unweighted 0.739, weighted 1.479
+reference cross-attention obj_loss: unweighted 0.582, weighted 1.164
+loss 8.320, reference attention loss (weighted) 1.182
+time index 0, loss: 9.502, loss threshold: 5.000, iteration: 1
+reference cross-attention obj_loss: unweighted 0.944, weighted 1.888
+reference cross-attention obj_loss: unweighted 0.734, weighted 1.468
+reference cross-attention obj_loss: unweighted 0.722, weighted 1.444
+reference cross-attention obj_loss: unweighted 0.570, weighted 1.140
+loss 8.314, reference attention loss (weighted) 1.158
+time index 0, loss: 9.473, loss threshold: 5.000, iteration: 2
+reference cross-attention obj_loss: unweighted 0.942, weighted 1.883
+reference cross-attention obj_loss: unweighted 0.715, weighted 1.430
+reference cross-attention obj_loss: unweighted 0.705, weighted 1.411
+reference cross-attention obj_loss: unweighted 0.558, weighted 1.117
+loss 8.310, reference attention loss (weighted) 1.137
+time index 0, loss: 9.447, loss threshold: 5.000, iteration: 3
+reference cross-attention obj_loss: unweighted 0.940, weighted 1.881
+reference cross-attention obj_loss: unweighted 0.694, weighted 1.388
+reference cross-attention obj_loss: unweighted 0.694, weighted 1.388
+reference cross-attention obj_loss: unweighted 0.550, weighted 1.101
+loss 8.305, reference attention loss (weighted) 1.118
+time index 0, loss: 9.423, loss threshold: 5.000, iteration: 4
+time index 1, loss: 9.423 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.936, weighted 1.872
+reference cross-attention obj_loss: unweighted 0.700, weighted 1.401
+reference cross-attention obj_loss: unweighted 0.721, weighted 1.442
+reference cross-attention obj_loss: unweighted 0.562, weighted 1.123
+loss 8.291, reference attention loss (weighted) 1.135
+time index 1, loss: 9.427, loss threshold: 5.000, iteration: 1
+reference cross-attention obj_loss: unweighted 0.932, weighted 1.865
+reference cross-attention obj_loss: unweighted 0.680, weighted 1.360
+reference cross-attention obj_loss: unweighted 0.708, weighted 1.417
+reference cross-attention obj_loss: unweighted 0.554, weighted 1.109
+loss 8.286, reference attention loss (weighted) 1.116
+time index 1, loss: 9.402, loss threshold: 5.000, iteration: 2
+reference cross-attention obj_loss: unweighted 0.928, weighted 1.857
+reference cross-attention obj_loss: unweighted 0.665, weighted 1.331
+reference cross-attention obj_loss: unweighted 0.697, weighted 1.395
+reference cross-attention obj_loss: unweighted 0.546, weighted 1.093
+loss 8.280, reference attention loss (weighted) 1.099
+time index 1, loss: 9.380, loss threshold: 5.000, iteration: 3
+reference cross-attention obj_loss: unweighted 0.925, weighted 1.850
+reference cross-attention obj_loss: unweighted 0.646, weighted 1.291
+reference cross-attention obj_loss: unweighted 0.685, weighted 1.371
+reference cross-attention obj_loss: unweighted 0.541, weighted 1.083
+loss 8.274, reference attention loss (weighted) 1.082
+time index 1, loss: 9.356, loss threshold: 5.000, iteration: 4
+time index 2, loss: 9.356 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.920, weighted 1.840
+reference cross-attention obj_loss: unweighted 0.647, weighted 1.295
+reference cross-attention obj_loss: unweighted 0.720, weighted 1.441
+reference cross-attention obj_loss: unweighted 0.566, weighted 1.131
+loss 8.249, reference attention loss (weighted) 1.107
+time index 2, loss: 9.356, loss threshold: 5.000, iteration: 1
+reference cross-attention obj_loss: unweighted 0.918, weighted 1.837
+reference cross-attention obj_loss: unweighted 0.627, weighted 1.253
+reference cross-attention obj_loss: unweighted 0.708, weighted 1.417
+reference cross-attention obj_loss: unweighted 0.558, weighted 1.117
+loss 8.242, reference attention loss (weighted) 1.088
+time index 2, loss: 9.329, loss threshold: 5.000, iteration: 2
+reference cross-attention obj_loss: unweighted 0.916, weighted 1.832
+reference cross-attention obj_loss: unweighted 0.611, weighted 1.222
+reference cross-attention obj_loss: unweighted 0.698, weighted 1.396
+reference cross-attention obj_loss: unweighted 0.548, weighted 1.097
+loss 8.235, reference attention loss (weighted) 1.070
+time index 2, loss: 9.305, loss threshold: 5.000, iteration: 3
+reference cross-attention obj_loss: unweighted 0.914, weighted 1.827
+reference cross-attention obj_loss: unweighted 0.599, weighted 1.197
+reference cross-attention obj_loss: unweighted 0.686, weighted 1.373
+reference cross-attention obj_loss: unweighted 0.540, weighted 1.080
+loss 8.228, reference attention loss (weighted) 1.055
+time index 2, loss: 9.283, loss threshold: 5.000, iteration: 4
+time index 3, loss: 9.283 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.919, weighted 1.837
+reference cross-attention obj_loss: unweighted 0.598, weighted 1.195
+reference cross-attention obj_loss: unweighted 0.758, weighted 1.516
+reference cross-attention obj_loss: unweighted 0.545, weighted 1.090
+loss 8.206, reference attention loss (weighted) 1.085
+time index 3, loss: 9.291, loss threshold: 5.000, iteration: 1
+reference cross-attention obj_loss: unweighted 0.920, weighted 1.840
+reference cross-attention obj_loss: unweighted 0.594, weighted 1.188
+reference cross-attention obj_loss: unweighted 0.704, weighted 1.408
+reference cross-attention obj_loss: unweighted 0.517, weighted 1.034
+loss 8.201, reference attention loss (weighted) 1.049
+time index 3, loss: 9.250, loss threshold: 5.000, iteration: 2
+reference cross-attention obj_loss: unweighted 0.916, weighted 1.831
+reference cross-attention obj_loss: unweighted 0.586, weighted 1.173
+reference cross-attention obj_loss: unweighted 0.686, weighted 1.372
+reference cross-attention obj_loss: unweighted 0.504, weighted 1.008
+loss 8.196, reference attention loss (weighted) 1.031
+time index 3, loss: 9.227, loss threshold: 5.000, iteration: 3
+reference cross-attention obj_loss: unweighted 0.908, weighted 1.817
+reference cross-attention obj_loss: unweighted 0.578, weighted 1.156
+reference cross-attention obj_loss: unweighted 0.677, weighted 1.354
+reference cross-attention obj_loss: unweighted 0.494, weighted 0.989
+loss 8.191, reference attention loss (weighted) 1.017
+time index 3, loss: 9.208, loss threshold: 5.000, iteration: 4
+time index 4, loss: 9.208 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.893, weighted 1.786
+reference cross-attention obj_loss: unweighted 0.617, weighted 1.234
+reference cross-attention obj_loss: unweighted 0.774, weighted 1.547
+reference cross-attention obj_loss: unweighted 0.519, weighted 1.037
+loss 8.185, reference attention loss (weighted) 1.081
+time index 4, loss: 9.266, loss threshold: 5.000, iteration: 1
+reference cross-attention obj_loss: unweighted 0.928, weighted 1.857
+reference cross-attention obj_loss: unweighted 0.590, weighted 1.179
+reference cross-attention obj_loss: unweighted 0.697, weighted 1.394
+reference cross-attention obj_loss: unweighted 0.491, weighted 0.982
+loss 8.180, reference attention loss (weighted) 1.034
+time index 4, loss: 9.214, loss threshold: 5.000, iteration: 2
+reference cross-attention obj_loss: unweighted 0.901, weighted 1.801
+reference cross-attention obj_loss: unweighted 0.567, weighted 1.135
+reference cross-attention obj_loss: unweighted 0.686, weighted 1.371
+reference cross-attention obj_loss: unweighted 0.488, weighted 0.976
+loss 8.174, reference attention loss (weighted) 1.010
+time index 4, loss: 9.184, loss threshold: 5.000, iteration: 3
+reference cross-attention obj_loss: unweighted 0.879, weighted 1.758
+reference cross-attention obj_loss: unweighted 0.546, weighted 1.093
+reference cross-attention obj_loss: unweighted 0.672, weighted 1.343
+reference cross-attention obj_loss: unweighted 0.486, weighted 0.971
+loss 8.170, reference attention loss (weighted) 0.988
+time index 4, loss: 9.158, loss threshold: 5.000, iteration: 4
+time index 5, loss: 9.158 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.922, weighted 1.844
+reference cross-attention obj_loss: unweighted 0.643, weighted 1.285
+reference cross-attention obj_loss: unweighted 0.772, weighted 1.545
+reference cross-attention obj_loss: unweighted 0.554, weighted 1.108
+loss 8.167, reference attention loss (weighted) 1.118
+time index 5, loss: 9.285, loss threshold: 5.000, iteration: 1
+reference cross-attention obj_loss: unweighted 0.885, weighted 1.769
+reference cross-attention obj_loss: unweighted 0.589, weighted 1.179
+reference cross-attention obj_loss: unweighted 0.735, weighted 1.469
+reference cross-attention obj_loss: unweighted 0.503, weighted 1.006
+loss 8.160, reference attention loss (weighted) 1.043
+time index 5, loss: 9.203, loss threshold: 5.000, iteration: 2
+reference cross-attention obj_loss: unweighted 0.875, weighted 1.750
+reference cross-attention obj_loss: unweighted 0.566, weighted 1.133
+reference cross-attention obj_loss: unweighted 0.703, weighted 1.405
+reference cross-attention obj_loss: unweighted 0.493, weighted 0.987
+loss 8.158, reference attention loss (weighted) 1.012
+time index 5, loss: 9.170, loss threshold: 5.000, iteration: 3
+time index 6, loss: 9.170 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.835, weighted 1.670
+reference cross-attention obj_loss: unweighted 0.637, weighted 1.273
+reference cross-attention obj_loss: unweighted 0.718, weighted 1.437
+reference cross-attention obj_loss: unweighted 0.555, weighted 1.110
+loss 8.164, reference attention loss (weighted) 1.074
+time index 6, loss: 9.238, loss threshold: 5.000, iteration: 1
+reference cross-attention obj_loss: unweighted 0.835, weighted 1.670
+reference cross-attention obj_loss: unweighted 0.596, weighted 1.192
+reference cross-attention obj_loss: unweighted 0.705, weighted 1.409
+reference cross-attention obj_loss: unweighted 0.523, weighted 1.046
+loss 8.154, reference attention loss (weighted) 1.033
+time index 6, loss: 9.187, loss threshold: 5.000, iteration: 2
+reference cross-attention obj_loss: unweighted 0.843, weighted 1.685
+reference cross-attention obj_loss: unweighted 0.577, weighted 1.155
+reference cross-attention obj_loss: unweighted 0.681, weighted 1.362
+reference cross-attention obj_loss: unweighted 0.508, weighted 1.015
+loss 8.147, reference attention loss (weighted) 1.009
+time index 6, loss: 9.156, loss threshold: 5.000, iteration: 3
+time index 7, loss: 9.156 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.844, weighted 1.688
+reference cross-attention obj_loss: unweighted 0.614, weighted 1.229
+reference cross-attention obj_loss: unweighted 0.695, weighted 1.391
+reference cross-attention obj_loss: unweighted 0.544, weighted 1.088
+loss 8.147, reference attention loss (weighted) 1.051
+time index 7, loss: 9.198, loss threshold: 5.000, iteration: 1
+reference cross-attention obj_loss: unweighted 0.822, weighted 1.645
+reference cross-attention obj_loss: unweighted 0.578, weighted 1.155
+reference cross-attention obj_loss: unweighted 0.668, weighted 1.336
+reference cross-attention obj_loss: unweighted 0.518, weighted 1.036
+loss 8.141, reference attention loss (weighted) 1.004
+time index 7, loss: 9.145, loss threshold: 5.000, iteration: 2
+reference cross-attention obj_loss: unweighted 0.814, weighted 1.629
+reference cross-attention obj_loss: unweighted 0.563, weighted 1.126
+reference cross-attention obj_loss: unweighted 0.627, weighted 1.253
+reference cross-attention obj_loss: unweighted 0.509, weighted 1.019
+loss 8.139, reference attention loss (weighted) 0.975
+time index 7, loss: 9.114, loss threshold: 5.000, iteration: 3
+time index 8, loss: 9.114 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.850, weighted 1.700
+reference cross-attention obj_loss: unweighted 0.578, weighted 1.157
+reference cross-attention obj_loss: unweighted 0.693, weighted 1.387
+reference cross-attention obj_loss: unweighted 0.528, weighted 1.055
+loss 8.124, reference attention loss (weighted) 1.026
+time index 8, loss: 9.150, loss threshold: 5.000, iteration: 1
+reference cross-attention obj_loss: unweighted 0.832, weighted 1.664
+reference cross-attention obj_loss: unweighted 0.565, weighted 1.131
+reference cross-attention obj_loss: unweighted 0.653, weighted 1.307
+reference cross-attention obj_loss: unweighted 0.523, weighted 1.045
+loss 8.123, reference attention loss (weighted) 0.997
+time index 8, loss: 9.120, loss threshold: 5.000, iteration: 2
+reference cross-attention obj_loss: unweighted 0.816, weighted 1.632
+reference cross-attention obj_loss: unweighted 0.552, weighted 1.104
+reference cross-attention obj_loss: unweighted 0.633, weighted 1.267
+reference cross-attention obj_loss: unweighted 0.517, weighted 1.033
+loss 8.121, reference attention loss (weighted) 0.976
+time index 8, loss: 9.097, loss threshold: 5.000, iteration: 3
+time index 9, loss: 9.097 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.841, weighted 1.682
+reference cross-attention obj_loss: unweighted 0.574, weighted 1.147
+reference cross-attention obj_loss: unweighted 0.680, weighted 1.359
+reference cross-attention obj_loss: unweighted 0.524, weighted 1.049
+loss 8.082, reference attention loss (weighted) 1.014
+time index 9, loss: 9.096, loss threshold: 5.000, iteration: 1
+reference cross-attention obj_loss: unweighted 0.844, weighted 1.687
+reference cross-attention obj_loss: unweighted 0.562, weighted 1.124
+reference cross-attention obj_loss: unweighted 0.655, weighted 1.311
+reference cross-attention obj_loss: unweighted 0.519, weighted 1.038
+loss 8.075, reference attention loss (weighted) 0.997
+time index 9, loss: 9.072, loss threshold: 5.000, iteration: 2
+reference cross-attention obj_loss: unweighted 0.840, weighted 1.679
+reference cross-attention obj_loss: unweighted 0.552, weighted 1.103
+reference cross-attention obj_loss: unweighted 0.643, weighted 1.285
+reference cross-attention obj_loss: unweighted 0.513, weighted 1.026
+loss 8.069, reference attention loss (weighted) 0.983
+time index 9, loss: 9.052, loss threshold: 5.000, iteration: 3
+time index 10, loss: 9.052 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.891, weighted 1.782
+reference cross-attention obj_loss: unweighted 0.593, weighted 1.185
+reference cross-attention obj_loss: unweighted 0.678, weighted 1.355
+reference cross-attention obj_loss: unweighted 0.539, weighted 1.078
+loss 8.015, reference attention loss (weighted) 1.043
+time index 10, loss: 9.057, loss threshold: 5.000, iteration: 1
+reference cross-attention obj_loss: unweighted 0.886, weighted 1.772
+reference cross-attention obj_loss: unweighted 0.573, weighted 1.147
+reference cross-attention obj_loss: unweighted 0.647, weighted 1.294
+reference cross-attention obj_loss: unweighted 0.534, weighted 1.067
+loss 8.009, reference attention loss (weighted) 1.018
+time index 10, loss: 9.027, loss threshold: 5.000, iteration: 2
+time index 11, loss: 9.027 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.856, weighted 1.712
+reference cross-attention obj_loss: unweighted 0.604, weighted 1.209
+reference cross-attention obj_loss: unweighted 0.652, weighted 1.305
+reference cross-attention obj_loss: unweighted 0.541, weighted 1.082
+loss 8.013, reference attention loss (weighted) 1.031
+time index 11, loss: 9.044, loss threshold: 5.000, iteration: 1
+reference cross-attention obj_loss: unweighted 0.848, weighted 1.696
+reference cross-attention obj_loss: unweighted 0.596, weighted 1.193
+reference cross-attention obj_loss: unweighted 0.635, weighted 1.270
+reference cross-attention obj_loss: unweighted 0.531, weighted 1.062
+loss 8.004, reference attention loss (weighted) 1.014
+time index 11, loss: 9.018, loss threshold: 5.000, iteration: 2
+time index 12, loss: 9.018 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.790, weighted 1.581
+reference cross-attention obj_loss: unweighted 0.572, weighted 1.144
+reference cross-attention obj_loss: unweighted 0.636, weighted 1.272
+reference cross-attention obj_loss: unweighted 0.532, weighted 1.064
+loss 8.018, reference attention loss (weighted) 0.988
+time index 12, loss: 9.006, loss threshold: 5.000, iteration: 1
+reference cross-attention obj_loss: unweighted 0.791, weighted 1.583
+reference cross-attention obj_loss: unweighted 0.561, weighted 1.122
+reference cross-attention obj_loss: unweighted 0.623, weighted 1.247
+reference cross-attention obj_loss: unweighted 0.523, weighted 1.046
+loss 8.013, reference attention loss (weighted) 0.974
+time index 12, loss: 8.986, loss threshold: 5.000, iteration: 2
+time index 13, loss: 8.986 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.790, weighted 1.581
+reference cross-attention obj_loss: unweighted 0.573, weighted 1.145
+reference cross-attention obj_loss: unweighted 0.621, weighted 1.242
+reference cross-attention obj_loss: unweighted 0.515, weighted 1.030
+loss 8.018, reference attention loss (weighted) 0.974
+time index 13, loss: 8.992, loss threshold: 5.000, iteration: 1
+reference cross-attention obj_loss: unweighted 0.789, weighted 1.578
+reference cross-attention obj_loss: unweighted 0.562, weighted 1.124
+reference cross-attention obj_loss: unweighted 0.604, weighted 1.207
+reference cross-attention obj_loss: unweighted 0.504, weighted 1.008
+loss 8.011, reference attention loss (weighted) 0.956
+time index 13, loss: 8.967, loss threshold: 5.000, iteration: 2
+time index 14, loss: 8.967 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.794, weighted 1.588
+reference cross-attention obj_loss: unweighted 0.589, weighted 1.178
+reference cross-attention obj_loss: unweighted 0.577, weighted 1.153
+reference cross-attention obj_loss: unweighted 0.493, weighted 0.985
+loss 8.010, reference attention loss (weighted) 0.956
+time index 14, loss: 8.966, loss threshold: 5.000, iteration: 1
+reference cross-attention obj_loss: unweighted 0.790, weighted 1.580
+reference cross-attention obj_loss: unweighted 0.567, weighted 1.134
+reference cross-attention obj_loss: unweighted 0.566, weighted 1.131
+reference cross-attention obj_loss: unweighted 0.485, weighted 0.970
+loss 8.001, reference attention loss (weighted) 0.936
+time index 14, loss: 8.937, loss threshold: 5.000, iteration: 2
+time index 15, loss: 8.937 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.804, weighted 1.607
+reference cross-attention obj_loss: unweighted 0.553, weighted 1.106
+reference cross-attention obj_loss: unweighted 0.603, weighted 1.206
+reference cross-attention obj_loss: unweighted 0.483, weighted 0.967
+loss 7.998, reference attention loss (weighted) 0.945
+time index 15, loss: 8.943, loss threshold: 5.000, iteration: 1
+reference cross-attention obj_loss: unweighted 0.795, weighted 1.590
+reference cross-attention obj_loss: unweighted 0.528, weighted 1.057
+reference cross-attention obj_loss: unweighted 0.569, weighted 1.138
+reference cross-attention obj_loss: unweighted 0.474, weighted 0.947
+loss 7.987, reference attention loss (weighted) 0.913
+time index 15, loss: 8.900, loss threshold: 5.000, iteration: 2
+time index 16, loss: 8.900 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.827, weighted 1.654
+reference cross-attention obj_loss: unweighted 0.514, weighted 1.027
+reference cross-attention obj_loss: unweighted 0.617, weighted 1.235
+reference cross-attention obj_loss: unweighted 0.476, weighted 0.952
+loss 7.985, reference attention loss (weighted) 0.933
+time index 16, loss: 8.918, loss threshold: 5.000, iteration: 1
+reference cross-attention obj_loss: unweighted 0.816, weighted 1.631
+reference cross-attention obj_loss: unweighted 0.498, weighted 0.996
+reference cross-attention obj_loss: unweighted 0.578, weighted 1.156
+reference cross-attention obj_loss: unweighted 0.466, weighted 0.932
+loss 7.975, reference attention loss (weighted) 0.902
+time index 16, loss: 8.877, loss threshold: 5.000, iteration: 2
+time index 17, loss: 8.877 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.841, weighted 1.682
+reference cross-attention obj_loss: unweighted 0.508, weighted 1.017
+reference cross-attention obj_loss: unweighted 0.616, weighted 1.233
+reference cross-attention obj_loss: unweighted 0.467, weighted 0.934
+loss 7.974, reference attention loss (weighted) 0.929
+time index 17, loss: 8.903, loss threshold: 5.000, iteration: 1
+reference cross-attention obj_loss: unweighted 0.831, weighted 1.662
+reference cross-attention obj_loss: unweighted 0.500, weighted 1.000
+reference cross-attention obj_loss: unweighted 0.585, weighted 1.170
+reference cross-attention obj_loss: unweighted 0.460, weighted 0.920
+loss 7.969, reference attention loss (weighted) 0.907
+time index 17, loss: 8.876, loss threshold: 5.000, iteration: 2
+time index 18, loss: 8.876 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.852, weighted 1.703
+reference cross-attention obj_loss: unweighted 0.504, weighted 1.008
+reference cross-attention obj_loss: unweighted 0.615, weighted 1.230
+reference cross-attention obj_loss: unweighted 0.460, weighted 0.920
+loss 7.966, reference attention loss (weighted) 0.926
+time index 18, loss: 8.892, loss threshold: 5.000, iteration: 1
+reference cross-attention obj_loss: unweighted 0.844, weighted 1.688
+reference cross-attention obj_loss: unweighted 0.495, weighted 0.989
+reference cross-attention obj_loss: unweighted 0.596, weighted 1.192
+reference cross-attention obj_loss: unweighted 0.455, weighted 0.910
+loss 7.962, reference attention loss (weighted) 0.909
+time index 18, loss: 8.871, loss threshold: 5.000, iteration: 2
+time index 19, loss: 8.871 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.851, weighted 1.702
+reference cross-attention obj_loss: unweighted 0.496, weighted 0.992
+reference cross-attention obj_loss: unweighted 0.609, weighted 1.218
+reference cross-attention obj_loss: unweighted 0.455, weighted 0.911
+loss 7.962, reference attention loss (weighted) 0.917
+time index 19, loss: 8.879, loss threshold: 5.000, iteration: 1
+reference cross-attention obj_loss: unweighted 0.847, weighted 1.693
+reference cross-attention obj_loss: unweighted 0.491, weighted 0.981
+reference cross-attention obj_loss: unweighted 0.592, weighted 1.184
+reference cross-attention obj_loss: unweighted 0.450, weighted 0.900
+loss 7.958, reference attention loss (weighted) 0.904
+time index 19, loss: 8.862, loss threshold: 5.000, iteration: 2
+time index 20, loss: 8.862 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.892, weighted 1.784
+reference cross-attention obj_loss: unweighted 0.494, weighted 0.988
+reference cross-attention obj_loss: unweighted 0.511, weighted 1.023
+reference cross-attention obj_loss: unweighted 0.438, weighted 0.876
+loss 7.961, reference attention loss (weighted) 0.881
+time index 20, loss: 8.842, loss threshold: 5.000, iteration: 1
+time index 21, loss: 8.842 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.884, weighted 1.768
+reference cross-attention obj_loss: unweighted 0.477, weighted 0.955
+reference cross-attention obj_loss: unweighted 0.544, weighted 1.089
+reference cross-attention obj_loss: unweighted 0.428, weighted 0.856
+loss 7.960, reference attention loss (weighted) 0.878
+time index 21, loss: 8.838, loss threshold: 5.000, iteration: 1
+time index 22, loss: 8.838 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.873, weighted 1.746
+reference cross-attention obj_loss: unweighted 0.463, weighted 0.925
+reference cross-attention obj_loss: unweighted 0.545, weighted 1.089
+reference cross-attention obj_loss: unweighted 0.419, weighted 0.837
+loss 7.962, reference attention loss (weighted) 0.863
+time index 22, loss: 8.825, loss threshold: 5.000, iteration: 1
+time index 23, loss: 8.825 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.853, weighted 1.707
+reference cross-attention obj_loss: unweighted 0.456, weighted 0.913
+reference cross-attention obj_loss: unweighted 0.540, weighted 1.079
+reference cross-attention obj_loss: unweighted 0.410, weighted 0.820
+loss 7.964, reference attention loss (weighted) 0.849
+time index 23, loss: 8.813, loss threshold: 5.000, iteration: 1
+time index 24, loss: 8.813 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.846, weighted 1.693
+reference cross-attention obj_loss: unweighted 0.453, weighted 0.906
+reference cross-attention obj_loss: unweighted 0.537, weighted 1.073
+reference cross-attention obj_loss: unweighted 0.409, weighted 0.817
+loss 7.964, reference attention loss (weighted) 0.844
+time index 24, loss: 8.807, loss threshold: 5.000, iteration: 1
+time index 25, loss: 8.807 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.844, weighted 1.687
+reference cross-attention obj_loss: unweighted 0.449, weighted 0.898
+reference cross-attention obj_loss: unweighted 0.530, weighted 1.060
+reference cross-attention obj_loss: unweighted 0.409, weighted 0.818
+loss 7.963, reference attention loss (weighted) 0.839
+time index 25, loss: 8.802, loss threshold: 5.000, iteration: 1
+time index 26, loss: 8.802 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.832, weighted 1.665
+reference cross-attention obj_loss: unweighted 0.439, weighted 0.879
+reference cross-attention obj_loss: unweighted 0.513, weighted 1.025
+reference cross-attention obj_loss: unweighted 0.406, weighted 0.811
+loss 7.960, reference attention loss (weighted) 0.823
+time index 26, loss: 8.782, loss threshold: 5.000, iteration: 1
+time index 27, loss: 8.782 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.828, weighted 1.657
+reference cross-attention obj_loss: unweighted 0.437, weighted 0.874
+reference cross-attention obj_loss: unweighted 0.498, weighted 0.996
+reference cross-attention obj_loss: unweighted 0.405, weighted 0.810
+loss 7.957, reference attention loss (weighted) 0.815
+time index 27, loss: 8.772, loss threshold: 5.000, iteration: 1
+time index 28, loss: 8.772 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.831, weighted 1.663
+reference cross-attention obj_loss: unweighted 0.442, weighted 0.884
+reference cross-attention obj_loss: unweighted 0.488, weighted 0.976
+reference cross-attention obj_loss: unweighted 0.408, weighted 0.815
+loss 7.955, reference attention loss (weighted) 0.816
+time index 28, loss: 8.771, loss threshold: 5.000, iteration: 1
+time index 29, loss: 8.771 (de-scaled with scale 5.0), loss threshold: 5.000
+reference cross-attention obj_loss: unweighted 0.831, weighted 1.663
+reference cross-attention obj_loss: unweighted 0.450, weighted 0.901
+reference cross-attention obj_loss: unweighted 0.477, weighted 0.954
+reference cross-attention obj_loss: unweighted 0.407, weighted 0.815
+loss 7.955, reference attention loss (weighted) 0.816
+time index 29, loss: 8.770, loss threshold: 5.000, iteration: 1
+Generation with spatial guidance from input latents and first 25 steps frozen (directly from the composed latents input)
+Generation from composed latents (with semantic guidance)
+[2025-06-26 06:02:21,720] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+final text_encoder_type: bert-base-uncased
+[('bird', [0.46, 0.04, 0.15, 0.1]), ('bird', [0.14, 0.08, 0.13, 0.11]), ('bird', [0.73, 0.08, 0.14, 0.11]), ('car bus', [0.4, 0.54, 0.21, 0.19]), ('pole post', [-0.0, 0.0, 0.05, 1.0]), ('grass shrub plant', [0.63, 0.15, 0.08, 0.04]), ('bicycle', [0.7, 0.56, 0.23, 0.16]), ('window', [0.07, 0.38, 0.2, 0.3]), ('shadow', [0.04, 0.85, 0.91, 0.09]), ('door', [0.37, 0.39, 0.26, 0.3])]
+[2025-06-26 06:02:43,880] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+final text_encoder_type: bert-base-uncased
+tensor([[0.4003, 0.5369, 0.6121, 0.7351]])
+aaaaaaaaaaa 1
+[2025-06-26 06:03:00,111] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Using box scale: (512, 512)
+[2025-06-26 06:03:59,260] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+logging improved.
+ControlLDM: Running in eps-prediction mode
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+DiffusionWrapper has 865.91 M params.
+making attention of type 'vanilla-xformers' with 512 in_channels
+building MemoryEfficientAttnBlock with 512 in_channels...
+Working with z of shape (1, 4, 32, 32) = 4096 dimensions.
+making attention of type 'vanilla-xformers' with 512 in_channels
+building MemoryEfficientAttnBlock with 512 in_channels...
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Loaded model config from [AnyDoor/configs/anydoor.yaml]
+Loaded state_dict from [AnyDoor/path/epoch=1-step=8687-pruned.ckpt]
+Data shape for DDIM sampling is (1, 4, 64, 64), eta 0.0
+Running DDIM Sampling with 50 timesteps
+[2025-06-26 06:05:38,964] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+final text_encoder_type: bert-base-uncased
+tensor([[0.0922, 0.5981, 0.3096, 0.7278]])
+aaaaaaaaaaa 1
+[2025-06-26 06:05:55,697] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Using box scale: (512, 512)
+[2025-06-26 06:06:55,791] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+logging improved.
+ControlLDM: Running in eps-prediction mode
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+DiffusionWrapper has 865.91 M params.
+making attention of type 'vanilla-xformers' with 512 in_channels
+building MemoryEfficientAttnBlock with 512 in_channels...
+Working with z of shape (1, 4, 32, 32) = 4096 dimensions.
+making attention of type 'vanilla-xformers' with 512 in_channels
+building MemoryEfficientAttnBlock with 512 in_channels...
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Loaded model config from [AnyDoor/configs/anydoor.yaml]
+Loaded state_dict from [AnyDoor/path/epoch=1-step=8687-pruned.ckpt]
+Data shape for DDIM sampling is (1, 4, 64, 64), eta 0.0
+Running DDIM Sampling with 50 timesteps
+[2025-06-26 06:08:34,338] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+final text_encoder_type: bert-base-uncased
+tensor([[0.3928, 0.5417, 0.6109, 0.7284]])
+aaaaaaaaaaa 1
+[2025-06-26 06:08:53,548] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Using box scale: (512, 512)
+[2025-06-26 06:09:52,708] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+logging improved.
+ControlLDM: Running in eps-prediction mode
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+DiffusionWrapper has 865.91 M params.
+making attention of type 'vanilla-xformers' with 512 in_channels
+building MemoryEfficientAttnBlock with 512 in_channels...
+Working with z of shape (1, 4, 32, 32) = 4096 dimensions.
+making attention of type 'vanilla-xformers' with 512 in_channels
+building MemoryEfficientAttnBlock with 512 in_channels...
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Loaded model config from [AnyDoor/configs/anydoor.yaml]
+Loaded state_dict from [AnyDoor/path/epoch=1-step=8687-pruned.ckpt]
+Data shape for DDIM sampling is (1, 4, 64, 64), eta 0.0
+Running DDIM Sampling with 50 timesteps
+[2025-06-26 06:11:31,401] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+final text_encoder_type: bert-base-uncased
+tensor([[0.7047, 0.5537, 0.9344, 0.7220],
+        [0.3913, 0.5418, 0.6177, 0.7226]])
+aaaaaaaaaaa 1
+[2025-06-26 06:11:50,510] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Detectron v2 is not installed
+[2025-06-26 06:12:04,954] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+logging improved.
+ControlLDM: Running in eps-prediction mode
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+DiffusionWrapper has 865.91 M params.
+making attention of type 'vanilla-xformers' with 512 in_channels
+building MemoryEfficientAttnBlock with 512 in_channels...
+Working with z of shape (1, 4, 32, 32) = 4096 dimensions.
+making attention of type 'vanilla-xformers' with 512 in_channels
+building MemoryEfficientAttnBlock with 512 in_channels...
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Loaded model config from [AnyDoor/configs/anydoor.yaml]
+Loaded state_dict from [AnyDoor/path/epoch=1-step=8687-pruned.ckpt]
+Data shape for DDIM sampling is (1, 4, 64, 64), eta 0.0
+Running DDIM Sampling with 50 timesteps
+[2025-06-26 06:13:43,082] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+API key loaded
+waiting for GPT-4 response in generation model selection
+waiting for GPT-4 response in bounding box generation
+The generation command is:
+ [{'tool': 'layout_to_image_LMD', 'input': {'text': 'an oil painting, where a green vintage car, a black scooter on the left of it and a blue bicycle on the right of it, are parked near a curb, with three birds in the sky', 'layout': [('a green vintage car', [191, 281, 130, 90]), ('a black scooter', [36, 303, 120, 60]), ('a blue bicycle', [361, 290, 110, 70]), ('a bird', [80, 40, 70, 50]), ('a bird', [230, 20, 70, 50]), ('a bird', [380, 40, 70, 50])], 'bg_prompt': 'An oil painting of a scene near a curb'}}]
+waiting for GPT-4 response in verification and self-correction
+The commands are:
+ [{'tool': 'layout_to_image_LMD', 'input': {'text': 'an oil painting, where a green vintage car, a black scooter on the left of it and a blue bicycle on the right of it, are parked near a curb, with three birds in the sky', 'layout': [('a green vintage car', [191, 281, 130, 90]), ('a black scooter', [36, 303, 120, 60]), ('a blue bicycle', [361, 290, 110, 70]), ('a bird', [80, 40, 70, 50]), ('a bird', [230, 20, 70, 50]), ('a bird', [380, 40, 70, 50])], 'bg_prompt': 'An oil painting of a scene near a curb'}, 'output': 'inputs/0.png'}, {'tool': 'edit', 'input': 'green vintage car', 'edit': 'blue bicycle'}, {'tool': 'edit', 'input': 'black scooter', 'edit': 'green vintage car'}, {'tool': 'edit', 'input': 'blue bicycle', 'edit': 'black scooter'}, {'tool': 'move', 'input': 'blue bicycle', 'box': [0.48, 0.58, 0.52, 0.35]}]
+----------------------------------------------
+0 {'tool': 'layout_to_image_LMD', 'input': {'text': 'an oil painting, where a green vintage car, a black scooter on the left of it and a blue bicycle on the right of it, are parked near a curb, with three birds in the sky', 'layout': [('a green vintage car', [191, 281, 130, 90]), ('a black scooter', [36, 303, 120, 60]), ('a blue bicycle', [361, 290, 110, 70]), ('a bird', [80, 40, 70, 50]), ('a bird', [230, 20, 70, 50]), ('a bird', [380, 40, 70, 50])], 'bg_prompt': 'An oil painting of a scene near a curb'}, 'output': 'inputs/0.png'}
+1 {'tool': 'segmentation', 'output': 'inputs/1_mask.png', 'input': {'image': 'inputs/0.png', 'text': 'green vintage car'}}
+2 {'tool': 'object_addition_anydoor', 'text': 'an oil painting, where a green vintage car, a black scooter on the left of it and a blue bicycle on the right of it, are parked near a curb, with three birds in the sky', 'text_bg': 'An oil painting of a scene near a curb', 'output': 'inputs/2.png', 'output_mask': 'inputs/2_mask.png', 'input': {'image': 'inputs/0.png', 'object': 'blue bicycle', 'layout': 'inputs/1_mask.png'}}
+3 {'tool': 'replace_anydoor', 'output': 'inputs/3.png', 'input': {'image': 'inputs/0.png', 'object': 'inputs/2.png', 'object_mask': 'inputs/2_mask.png', 'mask': 'inputs/1_mask.png'}}
+4 {'tool': 'segmentation', 'output': 'inputs/4_mask.png', 'input': {'image': 'inputs/3.png', 'text': 'black scooter'}}
+5 {'tool': 'object_addition_anydoor', 'text': 'an oil painting, where a green vintage car, a black scooter on the left of it and a blue bicycle on the right of it, are parked near a curb, with three birds in the sky', 'text_bg': 'An oil painting of a scene near a curb', 'output': 'inputs/5.png', 'output_mask': 'inputs/5_mask.png', 'input': {'image': 'inputs/3.png', 'object': 'green vintage car', 'layout': 'inputs/4_mask.png'}}
+6 {'tool': 'replace_anydoor', 'output': 'inputs/6.png', 'input': {'image': 'inputs/3.png', 'object': 'inputs/5.png', 'object_mask': 'inputs/5_mask.png', 'mask': 'inputs/4_mask.png'}}
+7 {'tool': 'segmentation', 'output': 'inputs/7_mask.png', 'input': {'image': 'inputs/6.png', 'text': 'blue bicycle'}}
+8 {'tool': 'object_addition_anydoor', 'text': 'an oil painting, where a green vintage car, a black scooter on the left of it and a blue bicycle on the right of it, are parked near a curb, with three birds in the sky', 'text_bg': 'An oil painting of a scene near a curb', 'output': 'inputs/8.png', 'output_mask': 'inputs/8_mask.png', 'input': {'image': 'inputs/6.png', 'object': 'black scooter', 'layout': 'inputs/7_mask.png'}}
+9 {'tool': 'replace_anydoor', 'output': 'inputs/9.png', 'input': {'image': 'inputs/6.png', 'object': 'inputs/8.png', 'object_mask': 'inputs/8_mask.png', 'mask': 'inputs/7_mask.png'}}
+10 {'tool': 'segmentation', 'output': 'inputs/10_mask.png', 'input': {'image': 'inputs/9.png', 'text': 'blue bicycle'}}
+11 {'tool': 'remove', 'output': 'inputs/11.png', 'input': {'image': 'inputs/9.png', 'mask': 'inputs/10_mask.png'}}
+12 {'tool': 'addition_anydoor', 'output': 'inputs/12.png', 'input': {'image': 'inputs/11.png', 'object': 'inputs/9.png', 'object_mask': 'inputs/10_mask.png', 'mask': [0.48, 0.58, 0.52, 0.35]}}
+13 {'tool': 'superresolution_SDXL', 'input': {'image': 'inputs/12.png'}, 'output': 'inputs/13.png'}
+----------------------------------------------
+Now start the generation process
+Time elapsed: 847 seconds
+Demo completed!

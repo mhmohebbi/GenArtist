@@ -1,0 +1,304 @@
+GPU Information:
+Thu Jun 26 15:30:41 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.133.07             Driver Version: 570.133.07     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla T4                       On  |   00000000:D9:00.0 Off |                    0 |
+| N/A   33C    P8             15W /   70W |       0MiB /  15360MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Python version:
+Python 3.11.5
+PyTorch version and CUDA availability:
+PyTorch: 2.2.1+cu121
+CUDA available: True
+CUDA devices: 1
+Diffusers version:
+[2025-06-26 15:30:48,268] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Diffusers: 0.18.0
+Starting GenArtist demo...
+[2025-06-26 15:30:57,408] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-06-26 15:31:13,623] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-06-26 15:33:23,374] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+final text_encoder_type: bert-base-uncased
+[('hat cap', [0.49, 0.75, 0.02, 0.01]), ('shoe', [-0.0, 0.58, 0.21, 0.12]), ('boat', [0.37, 0.75, 0.27, 0.11])]
+[2025-06-26 15:33:47,491] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Using box scale: (512, 512)
+[2025-06-26 15:34:52,433] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+logging improved.
+ControlLDM: Running in eps-prediction mode
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+DiffusionWrapper has 865.91 M params.
+making attention of type 'vanilla-xformers' with 512 in_channels
+building MemoryEfficientAttnBlock with 512 in_channels...
+Working with z of shape (1, 4, 32, 32) = 4096 dimensions.
+making attention of type 'vanilla-xformers' with 512 in_channels
+building MemoryEfficientAttnBlock with 512 in_channels...
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Loaded model config from [AnyDoor/configs/anydoor.yaml]
+Loaded state_dict from [AnyDoor/path/epoch=1-step=8687-pruned.ckpt]
+Data shape for DDIM sampling is (1, 4, 64, 64), eta 0.0
+Running DDIM Sampling with 50 timesteps
+[2025-06-26 15:36:35,093] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Using box scale: (512, 512)
+[2025-06-26 15:37:36,432] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+logging improved.
+ControlLDM: Running in eps-prediction mode
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+DiffusionWrapper has 865.91 M params.
+making attention of type 'vanilla-xformers' with 512 in_channels
+building MemoryEfficientAttnBlock with 512 in_channels...
+Working with z of shape (1, 4, 32, 32) = 4096 dimensions.
+making attention of type 'vanilla-xformers' with 512 in_channels
+building MemoryEfficientAttnBlock with 512 in_channels...
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Loaded model config from [AnyDoor/configs/anydoor.yaml]
+Loaded state_dict from [AnyDoor/path/epoch=1-step=8687-pruned.ckpt]
+Data shape for DDIM sampling is (1, 4, 64, 64), eta 0.0
+Running DDIM Sampling with 50 timesteps
+[2025-06-26 15:39:17,039] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Using box scale: (512, 512)
+[2025-06-26 15:40:18,801] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+logging improved.
+ControlLDM: Running in eps-prediction mode
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+DiffusionWrapper has 865.91 M params.
+making attention of type 'vanilla-xformers' with 512 in_channels
+building MemoryEfficientAttnBlock with 512 in_channels...
+Working with z of shape (1, 4, 32, 32) = 4096 dimensions.
+making attention of type 'vanilla-xformers' with 512 in_channels
+building MemoryEfficientAttnBlock with 512 in_channels...
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Loaded model config from [AnyDoor/configs/anydoor.yaml]
+Loaded state_dict from [AnyDoor/path/epoch=1-step=8687-pruned.ckpt]
+Data shape for DDIM sampling is (1, 4, 64, 64), eta 0.0
+Running DDIM Sampling with 50 timesteps
+[2025-06-26 15:41:59,675] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Using box scale: (512, 512)
+[2025-06-26 15:43:01,167] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+logging improved.
+ControlLDM: Running in eps-prediction mode
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+DiffusionWrapper has 865.91 M params.
+making attention of type 'vanilla-xformers' with 512 in_channels
+building MemoryEfficientAttnBlock with 512 in_channels...
+Working with z of shape (1, 4, 32, 32) = 4096 dimensions.
+making attention of type 'vanilla-xformers' with 512 in_channels
+building MemoryEfficientAttnBlock with 512 in_channels...
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is None and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 320, context_dim is 1024 and using 5 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is None and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 640, context_dim is 1024 and using 10 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is None and using 20 heads.
+Setting up MemoryEfficientCrossAttention. Query dim is 1280, context_dim is 1024 and using 20 heads.
+Loaded model config from [AnyDoor/configs/anydoor.yaml]
+Loaded state_dict from [AnyDoor/path/epoch=1-step=8687-pruned.ckpt]
+Data shape for DDIM sampling is (1, 4, 64, 64), eta 0.0
+Running DDIM Sampling with 50 timesteps
+[2025-06-26 15:44:43,528] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+API key loaded
+waiting for GPT-4 response in generation model selection
+waiting for GPT-4 response in bounding box generation
+The generation command is:
+ [{'tool': 'layout_to_image_BoxDiff', 'input': {'text': "An icy landscape. A vast expanse of snow-covered mountain peaks stretches endlessly. Beneath them is a dense forest and a colossal frozen lake. Three people are boating in three boats separately in the lake. Not far from the lake, a volcano threatens eruption, its rumblings felt even from afar. Above, a ferocious red dragon dominates the sky and commands the heavens, fueled by the volcano's relentless energy flow.", 'layout': [('a person boating', [49, 394, 90, 60]), ('a person boating', [196, 414, 90, 60]), ('a person boating', [362, 407, 90, 60]), ('a boat', [34, 464, 120, 45]), ('a boat', [185, 474, 120, 45]), ('a boat', [350, 465, 120, 45]), ('a volcano', [351, 120, 150, 200]), ('a red dragon', [110, 20, 312, 112])], 'bg_prompt': 'An icy landscape with snow-covered mountain peaks, a dense forest, and a colossal frozen lake'}}]
+waiting for GPT-4 response in verification and self-correction
+The commands are:
+ [{'tool': 'layout_to_image_BoxDiff', 'input': {'text': "An icy landscape. A vast expanse of snow-covered mountain peaks stretches endlessly. Beneath them is a dense forest and a colossal frozen lake. Three people are boating in three boats separately in the lake. Not far from the lake, a volcano threatens eruption, its rumblings felt even from afar. Above, a ferocious red dragon dominates the sky and commands the heavens, fueled by the volcano's relentless energy flow.", 'layout': [('a person boating', [49, 394, 90, 60]), ('a person boating', [196, 414, 90, 60]), ('a person boating', [362, 407, 90, 60]), ('a boat', [34, 464, 120, 45]), ('a boat', [185, 474, 120, 45]), ('a boat', [350, 465, 120, 45]), ('a volcano', [351, 120, 150, 200]), ('a red dragon', [110, 20, 312, 112])], 'bg_prompt': 'An icy landscape with snow-covered mountain peaks, a dense forest, and a colossal frozen lake'}, 'output': 'inputs/0.png'}, {'tool': 'addition', 'input': 'a dense forest', 'box': [0.2, 0.5, 0.6, 0.15]}, {'tool': 'addition', 'input': 'a colossal frozen lake', 'box': [0.1, 0.6, 0.8, 0.2]}, {'tool': 'addition', 'input': 'three boats', 'box': [0.3, 0.7, 0.4, 0.1]}, {'tool': 'addition', 'input': 'a ferocious red dragon', 'box': [0.6, 0.1, 0.3, 0.2]}]
+----------------------------------------------
+0 {'tool': 'layout_to_image_BoxDiff', 'input': {'text': "An icy landscape. A vast expanse of snow-covered mountain peaks stretches endlessly. Beneath them is a dense forest and a colossal frozen lake. Three people are boating in three boats separately in the lake. Not far from the lake, a volcano threatens eruption, its rumblings felt even from afar. Above, a ferocious red dragon dominates the sky and commands the heavens, fueled by the volcano's relentless energy flow.", 'layout': [('a person boating', [49, 394, 90, 60]), ('a person boating', [196, 414, 90, 60]), ('a person boating', [362, 407, 90, 60]), ('a boat', [34, 464, 120, 45]), ('a boat', [185, 474, 120, 45]), ('a boat', [350, 465, 120, 45]), ('a volcano', [351, 120, 150, 200]), ('a red dragon', [110, 20, 312, 112])], 'bg_prompt': 'An icy landscape with snow-covered mountain peaks, a dense forest, and a colossal frozen lake'}, 'output': 'inputs/0.png'}
+1 {'tool': 'object_addition_anydoor', 'text': "An icy landscape. A vast expanse of snow-covered mountain peaks stretches endlessly. Beneath them is a dense forest and a colossal frozen lake. Three people are boating in three boats separately in the lake. Not far from the lake, a volcano threatens eruption, its rumblings felt even from afar. Above, a ferocious red dragon dominates the sky and commands the heavens, fueled by the volcano's relentless energy flow.", 'text_bg': 'An icy landscape with snow-covered mountain peaks, a dense forest, and a colossal frozen lake', 'output': 'inputs/1.png', 'output_mask': 'inputs/1_mask.png', 'input': {'image': 'inputs/0.png', 'object': 'a dense forest', 'layout': [0.2, 0.5, 0.6, 0.15]}}
+2 {'tool': 'addition_anydoor', 'output': 'inputs/2.png', 'input': {'image': 'inputs/0.png', 'object': 'inputs/1.png', 'object_mask': 'inputs/1_mask.png', 'mask': [0.2, 0.5, 0.6, 0.15]}}
+3 {'tool': 'object_addition_anydoor', 'text': "An icy landscape. A vast expanse of snow-covered mountain peaks stretches endlessly. Beneath them is a dense forest and a colossal frozen lake. Three people are boating in three boats separately in the lake. Not far from the lake, a volcano threatens eruption, its rumblings felt even from afar. Above, a ferocious red dragon dominates the sky and commands the heavens, fueled by the volcano's relentless energy flow.", 'text_bg': 'An icy landscape with snow-covered mountain peaks, a dense forest, and a colossal frozen lake', 'output': 'inputs/3.png', 'output_mask': 'inputs/3_mask.png', 'input': {'image': 'inputs/2.png', 'object': 'a colossal frozen lake', 'layout': [0.1, 0.6, 0.8, 0.2]}}
+4 {'tool': 'addition_anydoor', 'output': 'inputs/4.png', 'input': {'image': 'inputs/2.png', 'object': 'inputs/3.png', 'object_mask': 'inputs/3_mask.png', 'mask': [0.1, 0.6, 0.8, 0.2]}}
+5 {'tool': 'object_addition_anydoor', 'text': "An icy landscape. A vast expanse of snow-covered mountain peaks stretches endlessly. Beneath them is a dense forest and a colossal frozen lake. Three people are boating in three boats separately in the lake. Not far from the lake, a volcano threatens eruption, its rumblings felt even from afar. Above, a ferocious red dragon dominates the sky and commands the heavens, fueled by the volcano's relentless energy flow.", 'text_bg': 'An icy landscape with snow-covered mountain peaks, a dense forest, and a colossal frozen lake', 'output': 'inputs/5.png', 'output_mask': 'inputs/5_mask.png', 'input': {'image': 'inputs/4.png', 'object': 'three boats', 'layout': [0.3, 0.7, 0.4, 0.1]}}
+6 {'tool': 'addition_anydoor', 'output': 'inputs/6.png', 'input': {'image': 'inputs/4.png', 'object': 'inputs/5.png', 'object_mask': 'inputs/5_mask.png', 'mask': [0.3, 0.7, 0.4, 0.1]}}
+7 {'tool': 'object_addition_anydoor', 'text': "An icy landscape. A vast expanse of snow-covered mountain peaks stretches endlessly. Beneath them is a dense forest and a colossal frozen lake. Three people are boating in three boats separately in the lake. Not far from the lake, a volcano threatens eruption, its rumblings felt even from afar. Above, a ferocious red dragon dominates the sky and commands the heavens, fueled by the volcano's relentless energy flow.", 'text_bg': 'An icy landscape with snow-covered mountain peaks, a dense forest, and a colossal frozen lake', 'output': 'inputs/7.png', 'output_mask': 'inputs/7_mask.png', 'input': {'image': 'inputs/6.png', 'object': 'a ferocious red dragon', 'layout': [0.6, 0.1, 0.3, 0.2]}}
+8 {'tool': 'addition_anydoor', 'output': 'inputs/8.png', 'input': {'image': 'inputs/6.png', 'object': 'inputs/7.png', 'object_mask': 'inputs/7_mask.png', 'mask': [0.6, 0.1, 0.3, 0.2]}}
+9 {'tool': 'superresolution_SDXL', 'input': {'image': 'inputs/8.png'}, 'output': 'inputs/9.png'}
+----------------------------------------------
+Now start the generation process
+Time elapsed: 886 seconds
+Demo completed!
